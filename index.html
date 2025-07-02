@@ -1,0 +1,699 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="shortcut icon" href="assets/image/logo.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+ <style>
+  *, html {
+    scroll-behavior: smooth;
+  }
+  @keyframes marquee {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+  .animate-marquee {
+    animation: marquee 20s linear infinite;
+  }
+ </style>
+ 
+  </head>
+  <body>
+<!-- Header -->
+<header class="bg-gradient-to-r from-white/70 via-slate-200/70 to-gray-300/70 backdrop-blur-md bg-blend-overlay shadow-md sticky top-0 z-50">
+  <div class="mx-auto flex h-16 max-w-screen-xl items-center justify-between px-4 sm:px-6 lg:px-8">
+
+    <!-- Logo -->
+    <a href="#" class="flex items-center gap-2">
+      <img src="assets/image/logo.png" alt="Logo" class="w-12 h-12 object-contain">
+      <span class="text-xl font-bold text-indigo-600 hidden sm:block">SMKJUARA</span>
+    </a>
+
+    <!-- Navigation (Desktop) -->
+    <nav class="hidden md:flex gap-6 text-sm font-medium">
+      <a href="#home" class="text-gray-700 hover:text-indigo-600 transition">Home</a>
+      <a href="#about" class="text-gray-700 hover:text-indigo-600 transition">Tentang</a>
+      <a href="#kejuruan" class="text-gray-700 hover:text-indigo-600 transition">Kejuruan</a>
+      <a href="#fasilitas" class="text-gray-700 hover:text-indigo-600 transition">Fasilitas</a>
+      <a href="#berita" class="text-gray-700 hover:text-indigo-600 transition">Berita</a>
+      <a href="#kontak" class="text-gray-700 hover:text-indigo-600 transition">Kontak</a>
+      <a href="#kerjasama" class="text-gray-700 hover:text-indigo-600 transition">Kerja Sama</a>
+    </nav>
+
+    <!-- CTA + Mobile Button -->
+    <div class="flex items-center gap-4">
+      <a href="#ppdb" class="hidden md:inline-block rounded-lg bg-gradient-to-br from bg-indigo-500 via-sky-600 to-blue-600 px-4 py-2 text-white text-sm font-semibold shadow transition">
+        PPDB
+      </a>
+
+      <!-- Mobile Menu Button -->
+      <button id="mobile-menu-button" class="block rounded-md bg-white/50 p-2.5 text-gray-700 hover:bg-white/70 backdrop-blur-sm md:hidden transition">
+        <span class="sr-only">Toggle menu</span>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
+             viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Navigation (Mobile) -->
+   <div id="mobile-menu" class="transition-all md:hidden hidden p-4 ">
+    <nav class="flex flex-col gap-3 text-sm font-medium">
+      <a href="#home" class="text-gray-700 hover:text-indigo-600 transition">Home</a>
+      <a href="#about" class="text-gray-700 hover:text-indigo-600 transition">Tentang</a>
+      <a href="#kejuruan" class="text-gray-700 hover:text-indigo-600 transition">Kejuruan</a>
+      <a href="#fasilitas" class="text-gray-700 hover:text-indigo-600 transition">Fasilitas</a>
+      <a href="#berita" class="text-gray-700 hover:text-indigo-600 transition">Berita</a>
+      <a href="#kontak" class="text-gray-700 hover:text-indigo-600 transition">Kontak</a>
+      <a href="#kerjasama" class="text-gray-700 hover:text-indigo-600 transition">kerja Sama</a>
+      <a href="#ppdb" class="rounded-lg bg-gradient-to-br from bg-indigo-500 via-sky-600 to-blue-600 px-4 py-2 text-white text-sm font-semibold shadow transition text-center">
+        PPDB
+      </a>
+    </nav>
+  
+  </div>
+</header>
+
+
+
+
+
+
+
+
+
+    <section class="bg-white">
+     <!-- Wrapper -->
+        <div class="mx-auto w-screen max-w-screen-xl mt-16 md:px-16 px-8">
+      <div class="flex flex-col lg:flex-row items-center justify-between gap-12" id="home">
+        
+        <!-- Left Text Content -->
+          <div class="max-w-xl text-left">
+          <h1 class="text-4xl font-bold text-gray-900 sm:text-5xl leading-tight">
+            Apa itu <span class="text-indigo-600">SMK Juara</span>?
+          </h1>
+
+          <p class="mt-4 text-base text-gray-700 sm:text-lg">
+            SMK Juara adalah sekolah menengah kejuruan yang berfokus pada pendidikan berbasis karakter, keterampilan teknologi, dan kesiapan kerja di dunia industri modern.
+          </p>
+
+          <ul class="mt-6 space-y-3 text-gray-700 text-sm sm:text-base">
+            <li class="flex items-start gap-2">Kurikulum berbasis industri</li>
+            <li class="flex items-start gap-2">Praktik langsung dan magang di perusahaan</li>
+            <li class="flex items-start gap-2">Pengembangan soft skill & karakter</li>
+            <li class="flex items-start gap-2">Pembinaan kewirausahaan & digital skill</li>
+          </ul>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-md mt-6">
+            <a
+              class="inline-block text-center rounded bg-indigo-600 px-4 py-3 font-semibold text-white shadow hover:bg-indigo-700 transition"
+              href="#ppdb"
+            >
+              🎓 Daftar Sekarang
+            </a>
+
+            <a
+              class="inline-block text-center rounded border border-gray-300 px-4 py-3 font-medium text-gray-700 hover:bg-gray-100 transition"
+              href="#about"
+            >
+              📘 Info Lengkap
+            </a>
+          </div>
+
+        </div>
+
+       
+         <div class="relative max-w-md">
+              
+              <div class="relative bg-white rounded-2xl shadow-2xl rotate-2 p-6 sm:p-8 border border-indigo-100">
+                <img src="assets/image/logo.png" alt="Visual Insight" class="w-full h-auto rounded-xl object-contain" />
+              </div>
+
+             
+              <div class="absolute -top-5 -right-5 flex items-center gap-3 bg-indigo-600 text-white px-5 py-3 rounded-xl shadow-lg">
+                <!-- Icon -->
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0v6" />
+                </svg>
+
+               
+                <div>
+                  <div class="text-sm font-semibold leading-tight">SMK Bisa</div>
+                  <div class="text-xs opacity-90">Juara</div>
+                </div>
+              </div>
+
+              <div class="absolute -bottom-6 -left-6 border rounded-xl p-4 shadow-lg bg-slate-200">
+                <div class="flex items-center gap-3">
+                  <div class="w-3 h-3 bg-green-700 rounded-full animate-pulse">
+                  </div>
+                  <h2 class="text-sm font-semibold">Lulus Otw Kerja !</h2>
+                </div>
+              </div>
+          </div>
+      </div>
+      <!-- SECTION: Hero Tentang -->
+        <div class="bg-gradient-to-r from-indigo-600 to-indigo-400 text-white py-20 mt-16" id="about">
+          <div class="max-w-6xl mx-auto px-6 text-center">
+            <h1 class="text-4xl sm:text-5xl font-bold mb-4">Tentang <span class="text-yellow-300">SMK</span></h1>
+            <p class="text-lg sm:text-xl max-w-2xl mx-auto">
+              SMK Juara adalah sekolah kejuruan unggulan yang mempersiapkan generasi muda menghadapi dunia kerja dan industri modern dengan keahlian dan karakter juara.
+            </p>
+          </div>
+        </div>
+
+        <!-- div: Visi Misi -->
+        <div class="py-16 bg-white">
+          <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-start">
+            <div>
+              <h2 class="text-2xl font-bold text-indigo-700 mb-4">Visi</h2>
+              <p class="text-gray-700 leading-relaxed">
+                Menjadi SMK unggulan yang menghasilkan lulusan kompeten, berakhlak mulia, dan siap bersaing secara global di bidang teknologi, bisnis, dan industri kreatif.
+              </p>
+            </div>
+            <div>
+              <h2 class="text-2xl font-bold text-indigo-700 mb-4">Misi</h2>
+              <ul class="text-gray-700 space-y-3 list-disc list-inside">
+                <li>Mengembangkan kurikulum berbasis industri</li>
+                <li>Meningkatkan kemampuan karakter dan soft skill siswa</li>
+                <li>Menjalin kerjasama dengan dunia usaha & industri</li>
+                <li>Mendorong inovasi dan pembelajaran berbasis teknologi</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- div: Keunggulan -->
+        <div class="py-16 bg-gray-50 ">
+          <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center text-gray-900 mb-10">Kenapa Memilih SMK</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+              <div class="bg-white shadow-md p-6 rounded-xl text-center">
+                <div class="text-indigo-600 mb-3">
+                  <svg class="w-10 h-10 mx-auto" fill="none" stroke="currentColor" stroke-width="2"
+                    viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M12 14l9-5-9-5-9 5 9 5zm0 0v6" />
+                  </svg>
+                </div>
+                <h3 class="font-bold text-lg mb-2">Praktik Langsung</h3>
+                <p class="text-sm text-gray-600">Siswa belajar dengan pendekatan praktik di dunia nyata dan lingkungan industri.</p>
+              </div>
+              <div class="bg-white shadow-md p-6 rounded-xl text-center">
+                <div class="text-indigo-600 mb-3">
+                  <svg class="w-10 h-10 mx-auto" fill="none" stroke="currentColor" stroke-width="2"
+                    viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M9.75 17L9 20l-2.25.75M14.25 17L15 20l2.25.75M12 12v.01M12 6v6m0 0v6" />
+                  </svg>
+                </div>
+                <h3 class="font-bold text-lg mb-2">Fasilitas Lengkap</h3>
+                <p class="text-sm text-gray-600">Dilengkapi lab komputer, studio multimedia, workshop teknik, dan lainnya.</p>
+              </div>
+              <div class="bg-white shadow-md p-6 rounded-xl text-center">
+                <div class="text-indigo-600 mb-3">
+                  <svg class="w-10 h-10 mx-auto" fill="none" stroke="currentColor" stroke-width="2"
+                    viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M12 4.5V9m0 0v4m0-4h4m-4 0H8m6 5a6 6 0 11-12 0 6 6 0 0112 0z" />
+                  </svg>
+                </div>
+                <h3 class="font-bold text-lg mb-2">Berkarakter & Mandiri</h3>
+                <p class="text-sm text-gray-600">Pendidikan karakter menjadi fondasi utama dalam membentuk siswa berintegritas.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- div: Testimoni / Call to Action -->
+        <div class="py-16 bg-indigo-50">
+          <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="text-2xl font-bold text-gray-900 mb-4">Gabung Bersama SMK Juara!</h2>
+            <p class="text-gray-700 mb-6">
+              Jadilah bagian dari generasi unggul yang siap kerja, siap kuliah, dan siap wirausaha. Bersama SMK Juara, kamu bisa!
+            </p>
+            <a href="#"
+              class="inline-block bg-indigo-600 text-white font-semibold px-6 py-3 rounded-lg shadow hover:bg-indigo-700 transition">
+              🎓 Daftar Sekarang
+            </a>
+          </div>
+        </div>
+      
+
+      <div class="bg-white py-16" id="kejuruan">
+        <div class="max-w-6xl mx-auto text-center mb-12">
+          <h2 class="text-3xl sm:text-4xl font-bold text-gray-900">Program Kejuruan</h2>
+          <p class="mt-3 text-gray-600 text-sm sm:text-base">SMK Juara menyediakan berbagai jurusan unggulan yang siap menghadapi tantangan dunia kerja dan industri.</p>
+        </div>
+
+          <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto">
+            
+            <div class="bg-white rounded-2xl shadow-md hover:shadow-xl transition overflow-hidden relative border border-indigo-100">
+ 
+              <div class="h-48 overflow-hidden">
+                <img src="assets/kejuruan/rpl.jpg" alt="Rekayasa Perangkat Lunak" class="w-full h-full object-cover object-center transition duration-300 hover:scale-105">
+              </div>
+
+              
+              <div class="p-6">
+                 <div class="flex items-center gap-4 mb-4">
+                  <div class="bg-indigo-100 p-3 rounded-full">
+                    <svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" stroke-width="2"
+                      viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M9.75 17L9 20l-2.25.75M14.25 17L15 20l2.25.75M12 12v.01M12 6v6m0 0v6" />
+                    </svg>
+                  </div>
+                  <h3 class="text-xl font-semibold text-gray-800">Rekayasa Perangkat Lunak (RPL)</h3>
+                </div>
+
+                
+                <p class="text-gray-600 text-sm leading-relaxed">
+                  Belajar pemrograman, pengembangan aplikasi web & mobile, UI/UX, serta dasar software engineering yang dibutuhkan industri.
+                </p>
+                <div class="flex mt-2">
+                  <a href="detail.html" class="underline text-indigo-600 font-semibold hover:text-slate-800  cursor-pointer">Lihat Detail...</a>
+                </div>
+              </div>
+
+              <!-- Badge Status -->
+              <div class="absolute bottom-4 right-4 bg-green-100 text-indigo-50 text-xs font-semibold px-3 py-1 rounded-full shadow-sm flex items-center gap-2">
+                <span class="w-2.5 h-2.5 bg-indigo-500 rounded-full animate-pulse"></span>
+              
+              </div>
+            </div>
+            <div class="bg-white rounded-2xl shadow-md hover:shadow-xl transition overflow-hidden relative border border-indigo-100">
+ 
+              <div class="h-48 overflow-hidden">
+                <img src="assets/kejuruan/rpl.jpg" alt="Rekayasa Perangkat Lunak" class="w-full h-full object-cover object-center transition duration-300 hover:scale-105">
+              </div>
+
+              
+              <div class="p-6">
+                 <div class="flex items-center gap-4 mb-4">
+                  <div class="bg-indigo-100 p-3 rounded-full">
+                    <svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" stroke-width="2"
+                      viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M9.75 17L9 20l-2.25.75M14.25 17L15 20l2.25.75M12 12v.01M12 6v6m0 0v6" />
+                    </svg>
+                  </div>
+                  <h3 class="text-xl font-semibold text-gray-800">Rekayasa Perangkat Lunak (RPL)</h3>
+                </div>
+
+                
+                <p class="text-gray-600 text-sm leading-relaxed">
+                  Belajar pemrograman, pengembangan aplikasi web & mobile, UI/UX, serta dasar software engineering yang dibutuhkan industri.
+                </p>
+                <div class="flex mt-2">
+                  <a href="detail.html" class="underline text-indigo-600 font-semibold hover:text-slate-800  cursor-pointer">Lihat Detail...</a>
+                </div>
+              </div>
+
+              <!-- Badge Status -->
+              <div class="absolute bottom-4 right-4 bg-green-100 text-indigo-50 text-xs font-semibold px-3 py-1 rounded-full shadow-sm flex items-center gap-2">
+                <span class="w-2.5 h-2.5 bg-indigo-500 rounded-full animate-pulse"></span>
+              
+              </div>
+            </div>
+            
+
+
+            
+          </div>
+      </div>
+      <div class="bg-white py-16" id="fasilitas">
+  <div class="max-w-5xl mx-auto text-center mb-12">
+    <h2 class="text-3xl sm:text-4xl font-bold text-gray-900">Fasilitas Sekolah</h2>
+    <p class="mt-3 text-gray-600 text-sm sm:text-base">
+      Kami menyediakan fasilitas terbaik untuk mendukung proses belajar mengajar dan pengembangan potensi siswa.
+    </p>
+  </div>
+
+  <ul class="space-y-16 relative">
+    <!-- Garis tengah -->
+    <div class="absolute left-1/2 top-0 bottom-0 w-1 bg-indigo-100 transform -translate-x-1/2 md:block hidden"></div>
+
+    <!-- Item 1 -->
+    <li class="flex flex-col md:flex-row items-center md:items-start md:justify-between gap-6">
+      <div class="w-full md:w-5/12 text-left md:order-1 order-2">
+        <h3 class="text-xl font-semibold text-indigo-700">Laboratorium Komputer</h3>
+        <p class="mt-2 text-gray-600 text-sm">
+          Lab komputer dilengkapi perangkat terbaru untuk mendukung praktik coding, desain grafis, dan multimedia.
+        </p>
+      </div>
+      <div class="w-full md:w-5/12 md:order-2 order-1">
+        <img src="assets/fasilitas/lab.jpg" alt="Lab Komputer" class="rounded-xl shadow-md w-full object-cover h-52">
+      </div>
+    </li>
+
+    <!-- Item 2 -->
+    <li class="flex flex-col md:flex-row items-center md:items-start md:justify-between gap-6">
+        
+      <div class="w-full md:w-5/12 md:order-1 order-2">
+        <img src="assets/fasilitas/perpus.jpg" alt="Perpustakaan" class="rounded-xl shadow-md w-full object-cover h-52">
+      </div>
+      <div class="w-full md:w-5/12 text-left md:text-right md:order-2 order-1">
+        <h3 class="text-xl font-semibold text-indigo-700">Perpustakaan Digital</h3>
+        <p class="mt-2 text-gray-600 text-sm">
+          Akses koleksi buku fisik dan digital untuk mendukung literasi dan referensi siswa dalam berbagai bidang.
+        </p>
+      </div>
+    </li>
+
+    <!-- Item 3 -->
+    <li class="flex flex-col md:flex-row items-center md:items-start md:justify-between gap-6">
+      <div class="w-full md:w-5/12 text-left md:order-1 order-2">
+        <h3 class="text-xl font-semibold text-indigo-700">Ruang Kelas Interaktif</h3>
+        <p class="mt-2 text-gray-600 text-sm">
+          Kelas dengan proyektor, whiteboard digital, dan suasana nyaman untuk menunjang proses belajar aktif.
+        </p>
+      </div>
+      <div class="w-full md:w-5/12 md:order-2 order-1">
+        <img src="assets/fasilitas/kelas.jpg" alt="Kelas Interaktif" class="rounded-xl shadow-md w-full object-cover h-52">
+      </div>
+    </li>
+  </ul>
+</div>
+
+
+<div class="bg-gray-50 py-16 px-4 lg:px-8" id="berita">
+  <div class="max-w-6xl mx-auto text-center mb-12">
+    <h2 class="text-3xl sm:text-4xl font-bold text-gray-900">Berita Sekolah</h2>
+    <p class="mt-3 text-gray-600 text-sm sm:text-base">
+      Temukan informasi terbaru seputar kegiatan, prestasi, dan pengumuman penting dari SMK Juara.
+    </p>
+  </div>
+
+  <div class="grid gap-8 lg:grid-cols-3 md:grid-cols-2 max-w-6xl mx-auto">
+   
+    <article class="bg-white rounded-xl shadow hover:shadow-lg transition overflow-hidden flex flex-col">
+      <img src="assets/berita/juara.jpg" alt="Lomba IT Nasional" class="h-52 w-full object-cover">
+      <div class="p-6 flex flex-col flex-grow">
+        <span class="text-xs text-indigo-600 font-semibold uppercase mb-2">Prestasi</span>
+        <h3 class="text-lg font-bold text-gray-800 mb-2">SMK Juara Sabet Juara 1 Lomba IT Nasional</h3>
+        <p class="text-sm text-gray-600 flex-grow">
+          Siswa jurusan RPL berhasil meraih juara 1 pada kompetisi IT Nasional 2025 dalam kategori pengembangan aplikasi mobile.
+        </p>
+        <div class="mt-4 flex justify-between items-center text-sm text-gray-500">
+          <span>12 Juni 2025</span>
+          <a href="detail-berita.html" class="text-indigo-600 font-semibold hover:underline">Selengkapnya</a>
+        </div>
+      </div>
+    </article>
+
+   
+    <article class="bg-white rounded-xl shadow hover:shadow-lg transition overflow-hidden flex flex-col">
+      <img src="assets/berita/ki.jpeg" alt="Kunjungan Industri" class="h-52 w-full object-cover">
+      <div class="p-6 flex flex-col flex-grow">
+        <span class="text-xs text-green-600 font-semibold uppercase mb-2">Kegiatan</span>
+        <h3 class="text-lg font-bold text-gray-800 mb-2">Kunjungan Industri ke PT. Telkom Bandung</h3>
+        <p class="text-sm text-gray-600 flex-grow">
+          Siswa kelas XI mengikuti kunjungan industri ke PT. Telkom, belajar langsung tentang infrastruktur jaringan skala nasional.
+        </p>
+        <div class="mt-4 flex justify-between items-center text-sm text-gray-500">
+          <span>5 Juni 2025</span>
+          <a href="#" class="text-indigo-600 font-semibold hover:underline">Selengkapnya</a>
+        </div>
+      </div>
+    </article>
+
+   
+    <article class="bg-white rounded-xl shadow hover:shadow-lg transition overflow-hidden flex flex-col">
+      <img src="assets/berita/mpls.jpg" alt="MPLS SMK Juara" class="h-52 w-full object-cover">
+      <div class="p-6 flex flex-col flex-grow">
+        <span class="text-xs text-yellow-600 font-semibold uppercase mb-2">Pengumuman</span>
+        <h3 class="text-lg font-bold text-gray-800 mb-2">Pelaksanaan MPLS Tahun Ajaran Baru</h3>
+        <p class="text-sm text-gray-600 flex-grow">
+          Masa Pengenalan Lingkungan Sekolah (MPLS) akan dilaksanakan selama 3 hari mulai 15 Juli 2025 dengan agenda edukatif dan kreatif.
+        </p>
+        <div class="mt-4 flex justify-between items-center text-sm text-gray-500">
+          <span>28 Juni 2025</span>
+          <a href="#" class="text-indigo-600 font-semibold hover:underline">Selengkapnya</a>
+        </div>
+      </div>
+    </article>
+  
+</div>
+
+
+
+      
+
+
+
+</div>
+<div id="kontak" class="bg-white py-16">
+  <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+    
+    <!-- Info Kontak -->
+    <div>
+      <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">Hubungi Kami</h2>
+      <p class="text-gray-600 text-sm sm:text-base mb-6">
+        Jika kamu memiliki pertanyaan seputar SMK Juara, silakan hubungi kami melalui informasi di bawah ini atau kirim pesan langsung.
+      </p>
+
+      <ul class="space-y-4 text-sm text-gray-700">
+        <li class="flex items-start gap-4">
+          <div class="bg-indigo-100 text-indigo-600 p-2 rounded-full">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2"
+              viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M3 5h12M9 3v2m0 4h6m-6 4h6m-6 4h6m-6 4h6" />
+            </svg>
+          </div>
+          <span>Jl. Pendidikan No. 123, Bandung, Jawa Barat</span>
+        </li>
+
+        <li class="flex items-start gap-4">
+          <div class="bg-indigo-100 text-indigo-600 p-2 rounded-full">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2"
+              viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M3 5h18M3 10h18M3 15h18M3 20h18" />
+            </svg>
+          </div>
+          <span>(022) 123-4567</span>
+        </li>
+
+        <li class="flex items-start gap-4">
+          <div class="bg-indigo-100 text-indigo-600 p-2 rounded-full">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2"
+              viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M16 12H8m0 0V8m0 4v4" />
+            </svg>
+          </div>
+          <span>info@smkjuara.sch.id</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Form Kontak -->
+    <div class="bg-gray-50 p-8 rounded-xl shadow-lg">
+      <form action="#" method="POST" class="space-y-6">
+        <div>
+          <label for="nama" class="block text-sm font-semibold text-gray-700 mb-1">Nama</label>
+          <input type="text" id="nama" name="nama" required
+            class="w-full rounded-lg p-2 border-gray-300 shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-200 text-sm">
+        </div>
+
+        <div>
+          <label for="email" class="block text-sm font-semibold text-gray-700 mb-1">Email</label>
+          <input type="email" id="email" name="email" required
+            class="w-full rounded-lg p-2 border-gray-300 shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-200 text-sm">
+        </div>
+
+        <div>
+          <label for="pesan" class="block text-sm font-semibold text-gray-700 mb-1">Pesan</label>
+          <textarea id="pesan" name="pesan" rows="4" required
+            class="w-full rounded-lg border-gray-300 shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-200 text-sm"></textarea>
+        </div>
+
+        <button type="submit"
+          class="w-full bg-indigo-600 hover:bg-indigo-700 text-white py-2 px-4 rounded-lg font-semibold shadow transition">
+          Kirim Pesan
+        </button>
+      </form>
+    </div>
+
+  </div>
+</div>
+<div class="bg-white py-16" id="ppdb">
+  <div class="mx-auto text-center">
+    <!-- Judul -->
+    <h2 class="text-3xl md:text-4xl font-bold text-indigo-700 mb-4">Penerimaan Peserta Didik Baru (PPDB) 2025</h2>
+    <p class="text-gray-700 text-lg mb-8">
+      Ayo bergabung bersama SMK Juara dan wujudkan masa depanmu bersama pendidikan vokasi terbaik!
+    </p>
+
+    <!-- Info PPDB -->
+    <div class="bg-white shadow-xl rounded-2xl p-8 text-left space-y-6">
+      <div>
+        <h3 class="text-xl font-semibold text-indigo-600 mb-2">📅 Jadwal Pendaftaran</h3>
+        <ul class="list-disc list-inside text-gray-700">
+          <li>Pendaftaran Dibuka: <strong>1 Mei 2025</strong></li>
+          <li>Pendaftaran Ditutup: <strong>30 Juni 2025</strong></li>
+          <li>Pengumuman Hasil Seleksi: <strong>5 Juli 2025</strong></li>
+          <li>Daftar Ulang: <strong>6–10 Juli 2025</strong></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="text-xl font-semibold text-indigo-600 mb-2">📍 Jurusan yang Tersedia</h3>
+        <ul class="list-disc list-inside text-gray-700">
+          <li>Rekayasa Perangkat Lunak (RPL)</li>
+          <li>Teknik Komputer & Jaringan (TKJ)</li>
+          <li>Multimedia (MM)</li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="text-xl font-semibold text-indigo-600 mb-2">📝 Syarat Pendaftaran</h3>
+        <ul class="list-disc list-inside text-gray-700">
+          <li>Fotokopi rapor kelas 9 semester 1 dan 2</li>
+          <li>Pas foto ukuran 3x4 (2 lembar)</li>
+          <li>Fotokopi akta kelahiran & KK</li>
+          <li>Mengisi formulir pendaftaran (online / offline)</li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="text-xl font-semibold text-indigo-600 mb-2">📎 Cara Daftar</h3>
+        <ol class="list-decimal list-inside text-gray-700">
+          <li>Klik tombol "Daftar Sekarang" di bawah</li>
+          <li>Isi formulir pendaftaran secara lengkap</li>
+          <li>Upload berkas persyaratan</li>
+          <li>Tunggu konfirmasi dari panitia PPDB</li>
+        </ol>
+      </div>
+
+      <div class="text-center mt-10">
+        <a href="#ppdb" target="_blank" class="inline-block bg-indigo-600 text-white font-semibold px-8 py-3 rounded-lg shadow hover:bg-indigo-700 transition duration-300">
+          📌 Daftar Sekarang
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="py-16 bg-white" id="kerjasama">
+  <div class="container mx-auto">
+    <div class="text-center mb-8">
+      <h2 class="text-2xl md:text-3xl font-semibold text-indigo-700">Kerja Sama dengan Perusahaan</h2>
+      <p class="text-gray-600 mt-2">Kerja sama dengan berbagai perusahaan dalam kegiatan Prakerin dan Kunjungan Industri</p>
+    </div>
+
+    <!-- Carousel dengan animasi marquee -->
+    <div class="overflow-hidden relative">
+      <div class="flex w-max animate-marquee gap-4 items-center">
+        <!-- Logo Perusahaan -->
+        <img src="assets/berita/juara.jpg" class="h-16 md:h-24 grayscale hover:grayscale-0 transition hover:cursor-pointer" />
+        <img src="assets/berita/juara.jpg" class="h-16 md:h-24 grayscale hover:grayscale-0 transition" />
+        <img src="assets/berita/juara.jpg" class="h-16 md:h-24 grayscale hover:grayscale-0 transition" />
+        <img src="assets/berita/juara.jpg" class="h-16 md:h-24 grayscale hover:grayscale-0 transition" />
+        <img src="assets/berita/juara.jpg" class="h-16 md:h-24 grayscale hover:grayscale-0 transition" />
+        <img src="assets/berita/juara.jpg" class="h-16 md:h-24 grayscale hover:grayscale-0 transition" />
+        <!-- Duplikat isi biar looping mulus -->
+        <img src="assets/berita/juara.jpg" class="h-16 md:h-24 grayscale hover:grayscale-0 transition" />
+        <img src="assets/berita/juara.jpg" class="h-16 md:h-24 grayscale hover:grayscale-0 transition" />
+        <img src="assets/berita/juara.jpg" class="h-16 md:h-24 grayscale hover:grayscale-0 transition" />
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+
+</section>
+<footer class="bg-indigo-100">
+  <div class="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
+    <div class="lg:flex lg:items-start lg:gap-12">
+      <!-- Logo dan Deskripsi -->
+      <div class="lg:w-1/3">
+        <div class="flex items-center gap-3 mb-4">
+          <img src="assets/image/logo.png" alt="Logo SMK Juara" class="w-10 h-10 object-contain" />
+          <h2 class="text-2xl font-bold text-indigo-700">SMK Juara</h2>
+        </div>
+        <p class="text-sm text-gray-700 leading-relaxed">
+          SMK Juara adalah sekolah kejuruan yang berfokus pada pengembangan keterampilan digital dan industri kreatif. Kami membekali siswa dengan kompetensi yang siap kerja dan siap bersaing di era teknologi.
+        </p>
+      </div>
+
+      <!-- Navigasi -->
+      <div class="grid grid-cols-2 sm:grid-cols-3 gap-10 mt-10 lg:mt-0 lg:w-2/3">
+        <div>
+          <h3 class="text-lg font-semibold text-gray-800 mb-4">Kejuruan</h3>
+          <ul class="space-y-2 text-sm text-gray-700">
+            <li><a href="#">Rekayasa Perangkat Lunak</a></li>
+            <li><a href="#">Desain Komunikasi Visual</a></li>
+            <li><a href="#">Teknik Komputer & Jaringan</a></li>
+            <li><a href="#">Multimedia</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="text-lg font-semibold text-gray-800 mb-4">Tautan Cepat</h3>
+          <ul class="space-y-2 text-sm text-gray-700">
+            <li><a href="#">Tentang Kami</a></li>
+            <li><a href="#">Galeri</a></li>
+            <li><a href="#">Kontak</a></li>
+            <li><a href="#">PPDB Online</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="text-lg font-semibold text-gray-800 mb-4">Hubungi Kami</h3>
+          <ul class="space-y-2 text-sm text-gray-700">
+            <li>📍 Jl. Pendidikan No. 123, Kota Juara</li>
+            <li>📞 (021) 1234-5678</li>
+            <li>✉️ info@smkjuara.sch.id</li>
+            <li>⏰ Senin - Jumat: 07.00 - 15.00</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="mt-10 border-t border-gray-300 pt-6 flex flex-col md:flex-row justify-between items-center">
+      <p class="text-sm text-gray-600">&copy; 2025 SMK Juara. All rights reserved.</p>
+
+      <div class="mt-4 md:mt-0 flex gap-4">
+        <a href="#" class="text-indigo-600 hover:text-indigo-800 transition">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="#" class="text-indigo-600 hover:text-indigo-800 transition">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="#" class="text-indigo-600 hover:text-indigo-800 transition">
+          <i class="fab fa-youtube"></i>
+        </a>
+        <a href="#" class="text-indigo-600 hover:text-indigo-800 transition">
+          <i class="fab fa-tiktok"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  </body>
+</html>
+<!-- Toggle Script -->
+<script>
+  const toggleBtn = document.getElementById('mobile-menu-button');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  toggleBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+</script>
+<!-- Script Carousel Geser Otomatis + Manual -->
