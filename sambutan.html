@@ -1,0 +1,380 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    darkMode: 'class', // <== agar dark mode pakai class, bukan sistem
+    theme: {
+      extend: {
+        colors: {
+          primary: '#4f46e5',
+          secondary: '#64748b',
+        },
+        fontFamily: {
+          poppins: ['Poppins', 'sans-serif'],
+        },
+      },
+    },
+  };
+</script>
+    <link rel="shortcut icon" href="assets/image/logo.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    #custom-cursor {
+  width: 20px;
+  height: 20px;
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  border-radius: 9999px;
+  transform: translate(-50%, -50%);
+  transition:
+    transform 0.05s ease,
+    background-color 0.3s ease,
+    box-shadow 0.3s ease,
+    opacity 0.3s ease;
+  background-color: #1f2937; /* gray-800 */
+  border: 2px solid #6b7280; /* gray-500 */
+  box-shadow: 0 0 12px 4px rgba(107, 114, 128, 0.4); /* glow abu */
+  mix-blend-mode: multiply;
+}
+
+.dark #custom-cursor {
+  background-color: #818cf8; /* indigo-400 */
+  border-color: #a5b4fc;     /* indigo-300 */
+  box-shadow: 0 0 14px 5px rgba(165, 180, 252, 0.5); /* glow indigo */
+  mix-blend-mode: screen;
+}
+  </style>
+  </head>
+  <body>
+    <header class="bg-gradient-to-r from-white/70 via-slate-200/70 to-gray-300/70 text-gray-800 backdrop-blur-md bg-blend-overlay shadow-md sticky top-0 z-50 dark:bg-gray-950">
+
+  <div class="mx-auto flex h-16 max-w-screen-xl items-center justify-between px-4 sm:px-6 lg:px-8">
+
+    <!-- Logo -->
+    <a href="#" class="flex items-center gap-2">
+      <img src="assets/image/logo.png" alt="Logo" class="w-12 h-12 object-contain">
+      <span class="text-xl font-bold text-indigo-600 hidden lg:block dark:text-slate-200">SMKJUARA</span>
+    </a>
+
+    <!-- Navigation (Desktop) -->
+    <nav class="hidden lg:flex gap-6 text-sm font-medium">
+      <a href="#home" class="text-gray-700 hover:text-indigo-600 transition dark:text-slate-50 dark:hover:text-indigo-300">Home</a>
+      <a href="#about" class="text-gray-700 hover:text-indigo-600 transition dark:text-slate-50 dark:hover:text-indigo-300">Sambutan</a>
+      <a href="#profil" class="text-gray-700 hover:text-indigo-600 transition dark:text-slate-50 dark:hover:text-indigo-300">Profile Sekolah</a>
+      <a href="#kejuruan" class="text-gray-700 hover:text-indigo-600 transition dark:text-slate-50 dark:hover:text-indigo-300">Kejuruan</a>
+      <a href="#fasilitas" class="text-gray-700 hover:text-indigo-600 transition dark:text-slate-50 dark:hover:text-indigo-300">Fasilitas</a>
+      <a href="#berita" class="text-gray-700 hover:text-indigo-600 transition dark:text-slate-50 dark:hover:text-indigo-300">Berita</a>
+      <a href="#kontak" class="text-gray-700 hover:text-indigo-600 transition dark:text-slate-50 dark:hover:text-indigo-300">Kontak</a>
+      <a href="#kerjasama" class="text-gray-700 hover:text-indigo-600 transition dark:text-slate-50 dark:hover:text-indigo-300">Kerja Sama</a>
+    </nav>
+
+    <!-- CTA + Mobile Button -->
+    <div class="flex items-center gap-4">
+      <a href="#SPMB" class="hidden lg:inline-block rounded-lg bg-gradient-to-br from bg-indigo-500 via-sky-600 to-blue-600 px-4 py-2 text-white text-sm font-semibold shadow transition">
+        SPMB
+      </a>
+      <button id="toggle-dark-mode" class="rounded-md bg-gradient-to-r from bg-slate-200 via-slate-400 to-gray-300 dark:bg-gray-700 text-gray-800 dark:text-white px-3 py-2 text-sm font-medium transition backdrop-blur-md bg-blend-overlay cursor-pointer">
+        <i id="dark-icon"></i>
+      </button>
+
+
+      <!-- Mobile Menu Button -->
+      <button id="mobile-menu-button" class="block rounded-md bg-white/50 p-1 text-gray-700 hover:bg-white/70 backdrop-blur-sm lg:hidden transition">
+        <span class="sr-only">Toggle menu</span>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
+             viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Navigation (Mobile) -->
+   <div id="mobile-menu" class="transition-all lg:hidden hidden p-4 ">
+    <nav class="flex flex-col gap-3 text-sm font-medium">
+      <a href="#home" class="text-gray-700 hover:text-indigo-600 transition dark:text-slate-50 dark:hover:text-indigo-300">Home</a>
+      <a href="#about" class="text-gray-700 hover:text-indigo-600 transition dark:text-slate-50 dark:hover:text-indigo-300">Sambutan</a>
+      <a href="#profil" class="text-gray-700 hover:text-indigo-600 transition dark:text-slate-50 dark:hover:text-indigo-300">Profile</a>
+      <a href="#kejuruan" class="text-gray-700 hover:text-indigo-600 transition dark:text-slate-50 dark:hover:text-indigo-300">Kejuruan</a>
+      <a href="#fasilitas" class="text-gray-700 hover:text-indigo-600 transition dark:text-slate-50 dark:hover:text-indigo-300">Fasilitas</a>
+      <a href="#berita" class="text-gray-700 hover:text-indigo-600 transition dark:text-slate-50 dark:hover:text-indigo-300">Berita</a>
+      <a href="#kontak" class="text-gray-700 hover:text-indigo-600 transition dark:text-slate-50 dark:hover:text-indigo-300">Kontak</a>
+      <a href="#kerjasama" class="text-gray-700 hover:text-indigo-600 transition dark:text-slate-50 dark:hover:text-indigo-300">kerja Sama</a>
+      <a href="#SPMB" class="rounded-lg bg-gradient-to-br from bg-indigo-500 via-sky-600 to-blue-600 px-4 py-2 text-white text-sm font-semibold shadow transition text-center">
+        SPMB
+      </a>
+    </nav>
+  
+  </div>
+</header>
+
+    <!-- Breadcrumb -->
+    <div class="bg-indigo-50 px-6 py-4 dark:bg-gray-800 ">
+      <nav aria-label="Breadcrumb">
+        <ol class="flex items-center gap-1 text-sm text-gray-700 dark:text-indigo-200">
+          <li>
+            <a href="index.html" class="block transition-colors hover:text-gray-900" aria-label="Home">
+              <svg xmlns="http://www.w3.org/2000/svg" class="size-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+              </svg>
+            </a>
+          </li>
+          <li class="rtl:rotate-180">
+            <svg xmlns="http://www.w3.org/2000/svg" class="size-4" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+            </svg>
+          </li>
+          <li>
+            <a href="index.html#kejuruan" class="block transition-colors hover:text-gray-900"> Beranda </a>
+          </li>
+          <li class="rtl:rotate-180">
+            <svg xmlns="http://www.w3.org/2000/svg" class="size-4" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+            </svg>
+          </li>
+          <li>
+            <a href="#" class="block transition-colors hover:text-gray-900"> Sambutan Kepala Sekolah </a>
+          </li>
+        </ol>
+      </nav>
+    </div>
+
+    <!-- Sambutan Kepala Sekolah -->
+<section class="bg-indigo-50 py-20 dark:bg-gray-800">
+  <div class="max-w-6xl mx-auto px-6 lg:px-16">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <!-- Gambar Kepala Sekolah (Mobile pertama) -->
+      <div class="relative group order-1 md:order-1">
+        <div class="overflow-hidden rounded-2xl shadow-xl border-4 border-white">
+          <img src="assets/image/logo.png" alt="Kepala Sekolah"
+            class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+        </div>
+      </div>
+
+      <!-- Sambutan Kepala Sekolah -->
+      <div class="order-2 md:order-2">
+        <div class="text-center mb-4">
+          <h2 class="font-bold text-3xl md:text-4xl uppercase mb-4 dark:text-white">
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-violet-500 to-sky-500">
+              Sambutan
+            </span>
+            Kepala Sekolah
+          </h2>
+          <div class="w-72 h-1 bg-indigo-300 mx-auto"></div>
+        </div>
+        <p class="text-gray-700 leading-relaxed mb-6 text-justify dark:text-slate-200">
+          Selamat datang di SMK Juara! Kami bangga dapat mempersembahkan pendidikan yang berbasis keterampilan
+          dan teknologi untuk membekali siswa kami dengan kemampuan yang siap menghadapi tantangan di dunia
+          industri. Di sini, kami fokus pada pengembangan kompetensi yang relevan dengan perkembangan teknologi
+          dan industri, dengan tujuan untuk mencetak generasi yang unggul dan siap kerja.
+        </p>
+        <p class="text-gray-700 leading-relaxed mb-6 text-justify dark:text-slate-200">
+          SMK Juara hadir untuk memberikan pendidikan terbaik, dengan berbagai program kejuruan yang dapat
+          disesuaikan dengan minat dan bakat siswa. Kami berkomitmen untuk terus berinovasi dan mengedepankan
+          kualitas pendidikan agar para siswa dapat mencapai potensi terbaik mereka.
+        </p>
+        <p class="text-gray-700 leading-relaxed mb-6 text-justify dark:text-slate-200">
+          Mari bergabung bersama kami dan jadilah bagian dari sekolah yang mempersiapkan masa depan cerah!
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <!-- Footer -->
+    <footer class="bg-indigo-100 dark:bg-zinc-900">
+  <div class="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
+    <div class="lg:flex lg:items-start lg:gap-12">
+      <!-- Logo dan Deskripsi -->
+      <div class="lg:w-1/3">
+        <div class="flex items-center gap-3 mb-4">
+          <img src="assets/image/logo.png" alt="Logo SMK Juara" class="w-10 h-10 object-contain" />
+          <h2 class="text-2xl font-bold text-indigo-700">SMK Juara</h2>
+        </div>
+        <p class="text-sm text-gray-700 dark:text-gray-200 leading-relaxed">
+          SMK Juara adalah sekolah kejuruan yang berfokus pada pengembangan keterampilan digital dan industri kreatif. Kami membekali siswa dengan kompetensi yang siap kerja dan siap bersaing di era teknologi.
+        </p>
+      </div>
+
+      <!-- Navigasi -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 mt-10 lg:mt-0 lg:w-2/3">
+        <div>
+          <h3 class="text-lg font-semibold text-gray-800 mb-4 dark:text-slate-100">Kejuruan</h3>
+          <ul class="space-y-2 text-sm text-gray-700 dark:text-gray-200">
+            <li><a href="#">Rekayasa Perangkat Lunak</a></li>
+            <li><a href="#">Desain Komunikasi Visual</a></li>
+            <li><a href="#">Teknik Komputer & Jaringan</a></li>
+            <li><a href="#">Multimedia</a></li>
+          </ul>
+        </div>
+
+        
+
+        <!-- Kontak & Maps -->
+        <div>
+          <h3 class="text-xl font-semibold text-gray-800 mb-4 dark:text-slate-100">Hubungi Kami</h3>
+          <ul class="space-y-2 text-sm text-gray-700 dark:text-gray-200 mb-4">
+            <li>
+              <div class="flex gap-2 items-center">
+                <i class="fa-solid fa-location-dot"></i>
+                <p>Jl. Pendidikan No. 123, Kota Juara</p>
+              </div>
+            </li>
+            <li>
+              <div class="flex gap-2 items-center">
+                <i class="fa-solid fa-phone-volume"></i>
+                <p>(021) 1234-5678</p>
+              </div>
+            </li>
+            <li>
+              <div class="flex gap-2 items-center">
+                <i class="fa-solid fa-inbox"></i>
+                <p>info@smkjuara.sch.id</p>
+              </div>
+            </li>
+            <li>
+              <div class="flex gap-2 items-center">
+                <i class="fa-solid fa-clock"></i>
+                <p>Senin - Jumat: 07.00 - 15.00</p>
+              </div>
+            </li>
+            
+          </ul>
+
+         
+        </div>
+        <div>
+          <h3 class="text-lg font-semibold text-gray-800 mb-4 dark:text-slate-100">Lokasi SMK Juara</h3>
+          <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3162.9300487267285!2d106.8226787153101!3d-6.200000000000000!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f3e3e8f44e65%3A0x2229b2e6e6c6c6f3!2sJl.%20Pendidikan%20No.123!5e0!3m2!1sid!2sid!4v1620000000000"
+              width="100%"
+              height="150"
+              style="border:0; border-radius: 0.5rem;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              class="shadow-md"
+            ></iframe>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="mt-10 border-t border-gray-300 pt-6 flex flex-col md:flex-row justify-between items-center">
+      <p class="text-sm text-gray-600 dark:text-gray-100">&copy; 2025 SMK Juara. All rights reserved.</p>
+
+      <div class="mt-4 md:mt-0 flex gap-4">
+        <a href="#" class="text-indigo-600 hover:text-indigo-800 transition">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="#" class="text-indigo-600 hover:text-indigo-800 transition">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="#" class="text-indigo-600 hover:text-indigo-800 transition">
+          <i class="fab fa-youtube"></i>
+        </a>
+        <a href="#" class="text-indigo-600 hover:text-indigo-800 transition">
+          <i class="fab fa-tiktok"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+</body>
+
+<div id="custom-cursor"
+     class="pointer-events-none fixed top-0 left-0 z-[9999] w-5 h-5 rounded-full bg-yellow-400 
+            opacity-80 hidden md:block border border-indigo-500 shadow-lg blur-[0.5px] ring-2 ring-indigo-400"> 
+</div>
+
+
+
+<script>
+  // 📱 Mobile menu toggle
+  const mobileBtn = document.getElementById('mobile-menu-button');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  mobileBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+
+  // 🌙 Dark mode toggle
+  const darkToggleBtn = document.getElementById('toggle-dark-mode');
+  const html = document.documentElement;
+  const icon = document.getElementById('dark-icon');
+
+  function updateIcon(isDark) {
+    icon.className = isDark ? 'fa-solid fa-sun' : 'fa-solid fa-moon';
+  }
+
+  const userPref = localStorage.getItem('theme');
+  if (userPref === 'dark') {
+    html.classList.add('dark');
+    updateIcon(true);
+  } else {
+    html.classList.remove('dark');
+    updateIcon(false);
+  }
+
+  darkToggleBtn.addEventListener('click', () => {
+    const isDark = html.classList.toggle('dark');
+    localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    updateIcon(isDark);
+  });
+</script>
+
+
+<script>
+  function toggleAccordion(id) {
+    const content = document.getElementById(id);
+    const icon = document.getElementById('icon-' + id);
+
+    content.classList.toggle('max-h-0');
+    content.classList.toggle('max-h-40'); // Ubah sesuai tinggi konten
+    icon.classList.toggle('rotate-180'); // Biar icon panah muter
+  }
+</script>
+<script>
+  const cursor = document.getElementById("custom-cursor");
+  let mouseX = 0, mouseY = 0;
+  let currentX = 0, currentY = 0;
+  const speed = 0.15;
+
+  document.addEventListener("mousemove", (e) => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+  });
+
+  function animateCursor() {
+    currentX += (mouseX - currentX) * speed;
+    currentY += (mouseY - currentY) * speed;
+    cursor.style.left = currentX + "px";
+    cursor.style.top = currentY + "px";
+    requestAnimationFrame(animateCursor);
+  }
+
+  animateCursor();
+
+  // Hover effect (scale saat di atas elemen interaktif)
+  const interactiveTags = ['a', 'button', 'input', 'textarea', '[role="button"]'];
+  interactiveTags.forEach(tag => {
+    document.querySelectorAll(tag).forEach(el => {
+      el.addEventListener('mouseenter', () => {
+        cursor.style.transform += ' scale(1.5)';
+        cursor.style.opacity = '0.5';
+      });
+      el.addEventListener('mouseleave', () => {
+        cursor.style.transform = 'translate(-50%, -50%) scale(1)';
+        cursor.style.opacity = '0.9';
+      });
+    });
+  });
+</script>

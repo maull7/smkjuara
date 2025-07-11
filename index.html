@@ -46,8 +46,7 @@
     linear-gradient(to right, #e5e7eb 1px, transparent 1px),
     linear-gradient(to bottom, #e5e7eb 1px, transparent 1px);
   background-size: 24px 24px;
-  animation: gridFloat 20s linear infinite;
-}
+ animation: gridFloat 10s linear infinite;}
 
 /* Untuk mode gelap */
 .dark body {
@@ -55,10 +54,9 @@
     linear-gradient(to right, #27272a 1px, transparent 1px),
     linear-gradient(to bottom, #27272a 1px, transparent 1px);
      background-size: 24px 24px;
-  animation: gridFloat 15s linear infinite;
+  animation: gridFloat 10s linear infinite;
 }
 
-/* Animasi halus bergerak */
 @keyframes gridFloat {
   0% {
     background-position: 0 0;
@@ -95,8 +93,6 @@
   mix-blend-mode: screen;
 }
 
-
-
  </style>
 
  
@@ -114,9 +110,10 @@
     </a>
 
     <!-- Navigation (Desktop) -->
-    <nav class="hidden md:flex gap-6 text-sm font-medium">
+    <nav class="hidden lg:flex gap-6 text-sm font-medium">
       <a href="#home" class="text-gray-700 hover:text-indigo-600 transition dark:text-slate-50 dark:hover:text-indigo-300">Home</a>
-      <a href="#about" class="text-gray-700 hover:text-indigo-600 transition dark:text-slate-50 dark:hover:text-indigo-300">Tentang</a>
+      <a href="#about" class="text-gray-700 hover:text-indigo-600 transition dark:text-slate-50 dark:hover:text-indigo-300">Sambutan</a>
+      <a href="#profil" class="text-gray-700 hover:text-indigo-600 transition dark:text-slate-50 dark:hover:text-indigo-300">Profile Sekolah</a>
       <a href="#kejuruan" class="text-gray-700 hover:text-indigo-600 transition dark:text-slate-50 dark:hover:text-indigo-300">Kejuruan</a>
       <a href="#fasilitas" class="text-gray-700 hover:text-indigo-600 transition dark:text-slate-50 dark:hover:text-indigo-300">Fasilitas</a>
       <a href="#berita" class="text-gray-700 hover:text-indigo-600 transition dark:text-slate-50 dark:hover:text-indigo-300">Berita</a>
@@ -126,8 +123,8 @@
 
     <!-- CTA + Mobile Button -->
     <div class="flex items-center gap-4">
-      <a href="#ppdb" class="hidden md:inline-block rounded-lg bg-gradient-to-br from bg-indigo-500 via-sky-600 to-blue-600 px-4 py-2 text-white text-sm font-semibold shadow transition">
-        PPDB
+      <a href="#SPMB" class="hidden lg:inline-block rounded-lg bg-gradient-to-br from bg-indigo-500 via-sky-600 to-blue-600 px-4 py-2 text-white text-sm font-semibold shadow transition">
+        SPMB
       </a>
       <button id="toggle-dark-mode" class="rounded-md bg-gradient-to-r from bg-slate-200 via-slate-400 to-gray-300 dark:bg-gray-700 text-gray-800 dark:text-white px-3 py-2 text-sm font-medium transition backdrop-blur-md bg-blend-overlay cursor-pointer">
         <i id="dark-icon"></i>
@@ -135,7 +132,7 @@
 
 
       <!-- Mobile Menu Button -->
-      <button id="mobile-menu-button" class="block rounded-md bg-white/50 p-1 text-gray-700 hover:bg-white/70 backdrop-blur-sm md:hidden transition">
+      <button id="mobile-menu-button" class="block rounded-md bg-white/50 p-1 text-gray-700 hover:bg-white/70 backdrop-blur-sm lg:hidden transition">
         <span class="sr-only">Toggle menu</span>
         <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
              viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -146,17 +143,18 @@
   </div>
 
   <!-- Navigation (Mobile) -->
-   <div id="mobile-menu" class="transition-all md:hidden hidden p-4 ">
+   <div id="mobile-menu" class="transition-all lg:hidden hidden p-4 ">
     <nav class="flex flex-col gap-3 text-sm font-medium">
       <a href="#home" class="text-gray-700 hover:text-indigo-600 transition dark:text-slate-50 dark:hover:text-indigo-300">Home</a>
-      <a href="#about" class="text-gray-700 hover:text-indigo-600 transition dark:text-slate-50 dark:hover:text-indigo-300">Tentang</a>
+      <a href="#about" class="text-gray-700 hover:text-indigo-600 transition dark:text-slate-50 dark:hover:text-indigo-300">Sambutan</a>
+      <a href="#profil" class="text-gray-700 hover:text-indigo-600 transition dark:text-slate-50 dark:hover:text-indigo-300">Profile</a>
       <a href="#kejuruan" class="text-gray-700 hover:text-indigo-600 transition dark:text-slate-50 dark:hover:text-indigo-300">Kejuruan</a>
       <a href="#fasilitas" class="text-gray-700 hover:text-indigo-600 transition dark:text-slate-50 dark:hover:text-indigo-300">Fasilitas</a>
       <a href="#berita" class="text-gray-700 hover:text-indigo-600 transition dark:text-slate-50 dark:hover:text-indigo-300">Berita</a>
       <a href="#kontak" class="text-gray-700 hover:text-indigo-600 transition dark:text-slate-50 dark:hover:text-indigo-300">Kontak</a>
       <a href="#kerjasama" class="text-gray-700 hover:text-indigo-600 transition dark:text-slate-50 dark:hover:text-indigo-300">kerja Sama</a>
-      <a href="#ppdb" class="rounded-lg bg-gradient-to-br from bg-indigo-500 via-sky-600 to-blue-600 px-4 py-2 text-white text-sm font-semibold shadow transition text-center">
-        PPDB
+      <a href="#SPMB" class="rounded-lg bg-gradient-to-br from bg-indigo-500 via-sky-600 to-blue-600 px-4 py-2 text-white text-sm font-semibold shadow transition text-center">
+        SPMB
       </a>
     </nav>
   
@@ -173,11 +171,12 @@
 
    
      <!-- Wrapper -->
-        <div class="mx-auto w-screen max-w-screen-xl py-16 md:px-16 px-8 relative overflow-hidden">
-      <div class="flex flex-col lg:flex-row items-center justify-between gap-12" id="home">
+    <div class="mx-auto w-full py-16 relative">
+
+      <div class="px-8 flex flex-col-reverse lg:flex-row items-center justify-between gap-12" id="home">
   <!-- Left Text Content -->
   <div class="max-w-xl text-left">
-    <h1 class="text-4xl font-extrabold sm:text-5xl leading-tight bg-gradient-to-br from-violet-600 via-blue-500 to-cyan-300 bg-clip-text text-transparent">
+    <h1 class="text-2xl mt-2 md:mt-none font-extrabold sm:text-5xl leading-tight bg-gradient-to-br from-violet-600 via-blue-500 to-cyan-300 bg-clip-text text-transparent">
       BANGUN MASA DEPAN BERSAMA SMK
     </h1>
 
@@ -216,7 +215,7 @@
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-md mt-6">
       <a
         class="inline-block text-center rounded-lg bg-indigo-600 px-4 py-3 font-semibold text-white shadow hover:bg-indigo-700 transition"
-        href="#ppdb"
+        href="#SPMB"
       >
       <i class="fa-solid fa-graduation-cap text-slate-800"></i> Daftar Sekarang
       </a>
@@ -234,7 +233,7 @@
   </div>
 
   <!-- Right Image with Effects -->
-  <div class="relative max-w-md">
+  <div class="relative max-w-md ">
     <div class="relative bg-white dark:bg-slate-200 rounded-2xl shadow-2xl rotate-2 p-6 sm:p-8 border border-indigo-100 dark:border-indigo-800">
       <img src="assets/image/logo.png" alt="Visual Insight" class="w-full h-auto rounded-xl object-contain" />
     </div>
@@ -261,50 +260,89 @@
 </div>
 
       <!-- SECTION: Hero Tentang -->
-        <div class="bg-gradient-to-r from-indigo-600 to-violet-400 text-white py-20 mt-16" id="about">
-          <div class="max-w-6xl mx-auto px-6 text-center">
-            <h1 class="text-4xl sm:text-5xl font-bold mb-4">Tentang <span class="text-yellow-300">SMK</span></h1>
-            <p class="text-lg sm:text-xl max-w-2xl mx-auto">
-              SMK Juara adalah sekolah kejuruan unggulan yang mempersiapkan generasi muda menghadapi dunia kerja dan industri modern dengan keahlian dan karakter juara.
-            </p>
-          </div>
-        </div>
-
-        <!-- div: Visi Misi -->
-       <div class="py-16 bg-white dark:bg-zinc-900 transition-colors duration-300">
-
-  <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-start">
-    <!-- Visi -->
-    <div>
-      <h2 class="text-2xl font-bold text-indigo-700 dark:text-indigo-400 mb-4">
-        Visi
-      </h2>
-      <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
-        Menjadi SMK unggulan yang menghasilkan lulusan kompeten, berakhlak mulia, dan siap bersaing secara global di bidang teknologi, bisnis, dan industri kreatif.
+        <div class="bg-gradient-to-r from-indigo-600 to-violet-400 text-white px-8 py-16 mt-16" id="about">
+  <div class="flex flex-col-reverse md:flex-row items-center justify-between gap-12">
+    <!-- Teks Sambutan -->
+    <div class="md:w-1/2 text-left italic">
+      <h2 class="text-2xl md:text-4xl font-bold mb-6">Sambutan <span class="text-yellow-300">Kepala Sekolah</span></h2>
+      <p class="text-lg sm:text-xl leading-relaxed max-w-xl">
+        Assalamu'alaikum warahmatullahi wabarakatuh.<br><br>
+        Dengan penuh rasa syukur, kami menyambut para siswa baru di SMK Juara. Kami berkomitmen memberikan............
       </p>
+      <p class="my-8 font-semibold">- Kepala Sekolah, <br> Bapak/Ibu Nama Kepala Sekolah</p>
+      <a href="sambutan.html" class="p-2 bg-indigo-400 rounded-md">Lihat Lengkap...</a>
+
     </div>
 
-    <!-- Misi -->
-    <div>
-      <h2 class="text-2xl font-bold text-indigo-700 dark:text-indigo-400 mb-4">
-        Misi
-      </h2>
-      <ul class="text-gray-700 dark:text-gray-300 space-y-3 list-disc list-inside">
-        <li>Mengembangkan kurikulum berbasis industri</li>
-        <li>Meningkatkan kemampuan karakter dan soft skill siswa</li>
-        <li>Menjalin kerjasama dengan dunia usaha & industri</li>
-        <li>Mendorong inovasi dan pembelajaran berbasis teknologi</li>
-      </ul>
+    <!-- Gambar Kepala Sekolah -->
+    <div class="md:w-1/2 flex justify-end">
+      <img src="assets/image/logo.png" alt="Kepala Sekolah" class="rounded-xl shadow-lg max-w-full h-auto" />
     </div>
   </div>
 </div>
 
+
+        <!-- div: Visi Misi -->
+  <div class="py-16 px-8 bg-white dark:bg-zinc-900 transition-colors duration-300">
+    <div class="text-center mb-4">
+            <h2 class="font-bold text-3xl md:text-4xl uppercase mb-4 dark:text-white"><span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-violet-500 to-sky-500">
+        Tentang
+      </span>
+      kami</h2>
+      <div class="w-24 h-1 bg-indigo-300 mx-auto"></div>
+    </div>
+  <div class="flex justify-between items-start gap-18 flex-col md:flex-row gap-y-3">
+
+    <!-- Visi Card -->
+    <div class="w-full md:w-1/2 md:pr-4">
+      <div class="bg-white dark:bg-zinc-800 p-6 rounded-lg shadow-lg backdrop-blur-md border border-gray-300 dark:border-gray-700">
+        <h2 class="text-2xl font-bold text-indigo-700 dark:text-white mb-4">Visi</h2>
+        <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+          Menjadi SMK unggulan yang menghasilkan lulusan kompeten, berakhlak mulia, dan siap bersaing secara global di bidang teknologi, bisnis, dan industri kreatif.
+        </p>
+      </div>
+    </div>
+
+    <!-- Misi Card -->
+    <div class="w-full md:w-1/2 md:pl-4">
+      <div class="bg-white dark:bg-zinc-800 p-6 rounded-lg shadow-lg backdrop-blur-md border border-gray-300 dark:border-gray-700">
+        <h2 class="text-2xl font-bold text-indigo-700 dark:text-white mb-4">Misi</h2>
+        <div class="space-y-4">
+          <div class="flex items-center gap-4">
+            <i class="fas fa-cogs text-indigo-600 dark:text-indigo-400"></i>
+            <p class="text-gray-700 dark:text-gray-300">Mengembangkan kurikulum berbasis industri</p>
+          </div>
+          <div class="flex items-center gap-4">
+            <i class="fas fa-users-cog text-indigo-600 dark:text-indigo-400"></i>
+            <p class="text-gray-700 dark:text-gray-300">Meningkatkan kemampuan karakter dan soft skill siswa</p>
+          </div>
+          <div class="flex items-center gap-4">
+            <i class="fas fa-handshake text-indigo-600 dark:text-indigo-400"></i>
+            <p class="text-gray-700 dark:text-gray-300">Menjalin kerjasama dengan dunia usaha & industri</p>
+          </div>
+          <div class="flex items-center gap-4">
+            <i class="fas fa-laptop-code text-indigo-600 dark:text-indigo-400"></i>
+            <p class="text-gray-700 dark:text-gray-300">Mendorong inovasi dan pembelajaran berbasis teknologi</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+
         <!-- div: Keunggulan -->
-       <div class="py-16 bg-gray-50 dark:bg-transparent transition-colors duration-300">
-  <div class="max-w-6xl mx-auto px-6">
-    <h2 class="text-3xl font-bold text-center text-gray-900 dark:text-white mb-10">
-      Kenapa Memilih SMK
-    </h2>
+       <div class="py-16 px-8 bg-gray-50 dark:bg-gray-800 transition-colors duration-300">
+  <div class="mx-auto">
+      <div class="text-center mb-4">
+            <h2 class="font-bold text-3xl md:text-4xl uppercase mb-4 dark:text-white"><span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-violet-500 to-sky-500">
+        Keunggulan
+      </span>
+      Smk</h2>
+      <div class="w-24 h-1 bg-indigo-300 mx-auto"></div>
+    </div>
     <div class="grid md:grid-cols-3 gap-8">
       
       <!-- Card 1 -->
@@ -354,14 +392,88 @@
     </div>
   </div>
 </div>
+<div class="py-16 px-8" id="profil">
+    <div class="text-center mb-4">
+            <h2 class="font-bold text-3xl md:text-4xl uppercase mb-4 dark:text-white"><span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-violet-500 to-sky-500">
+        Profil
+      </span>
+      Sekolah</h2>
+      <div class="w-44 h-1 bg-indigo-300 mx-auto"></div>
+    </div>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+    <div class="flex flex-col text-start">
+      
+      <div class="py-4 text-gray-600 font-semibold dark:text-gray-400 ">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. A mollitia delectus commodi dolorum ipsum reiciendis officia ea, voluptate dignissimos fugit accusamus dolore laudantium, non quam exercitationem natus deserunt eius? Delectus?
+      </div>
+      <div class="py-4 text-gray-600 font-semibold dark:text-gray-400">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. A mollitia delectus commodi dolorum ipsum reiciendis officia ea, voluptate dignissimos fugit accusamus dolore laudantium, non quam exercitationem natus deserunt eius? Delectus?
+      </div>
+     <div class="lg:pe-32">
+        <div class="py-4 grid grid-cols-1 md:grid-cols-2 gap-3 items-center">
+            
+            <div class="p-2 bg-indigo-100 shadow-md rounded-md flex gap-3 font-semibold text-black w-auto">
+              <div class="flex gap-3 items-center">
+                <span class="text-indigo-600">100%</span>
+                <h2 class="text-sm">Lulus PTN</h2>
+
+              </div>
+            </div>
+            <div class="p-2 bg-indigo-100 shadow-md rounded-md flex gap-3 font-semibold text-black w-auto">
+              <span class="text-indigo-600">100%</span>
+              <h2>Lulus PTN</h2>
+            </div>
+            <div class="p-2 bg-indigo-100 shadow-md rounded-md flex gap-3 font-semibold text-black w-auto">
+              <span class="text-indigo-600">100%</span>
+              <h2>Lulus PTN</h2>
+            </div>
+          </div>
+
+     </div>
+  
+
+    </div>
+    <div class="grid grid-cols-2 gap-3">
+      <div class="rounded-md p-4 shadow-md bg-slate-100 flex justify-center items-center flex-col text-center dark:bg-slate-800 dark:text-white">
+        <div class="rounded-full bg-gradient-to-br from-indigo-400 via-indigo-300 to-violet-200 p-8"></div>
+           <h3 class="text-3xl md:text-4xl font-bold my-2">40</h3>
+            <h4 class="text-sm md:text-xl text-gray-600 dark:text-slate-200">Ruang Kelas</h4>   
+       </div>
+      <div class="rounded-md p-4 shadow-md bg-slate-100 flex justify-center items-center flex-col text-center dark:bg-slate-800 dark:text-white">
+        <div class="rounded-full bg-gradient-to-br from-indigo-200 via-indigo-400 to-violet-700 p-8"></div>
+          <h3 class="text-3xl md:text-4xl font-bold my-2">25</h3>
+            <h4 class="text-sm md:text-xl text-gray-600 dark:text-white">Laboratorium</h4>     
+       </div>
+      <div class="rounded-md p-4 shadow-md bg-slate-100 flex justify-center items-center flex-col text-center dark:bg-gray-800 dark:text-white">
+        <div class="rounded-full bg-gradient-to-br from-sky-100 via-blue-200 to-blue-300 p-8"></div>
+          <h3 class="text-3xl md:text-4xl font-bold my-2">9</h3>
+            <h4 class="text-sm md:text-xl text-gray-600 dark:text-white">Lapangan Olahraga</h4>     
+       </div>
+      <div class="rounded-md p-4 shadow-md bg-slate-100 flex justify-center items-center flex-col text-center dark:bg-gray-800 dark:text-white">
+        <div class="rounded-full bg-gradient-to-br from-sky-200 via-blue-3000 to-violet-200 p-8"></div>
+          <h3 class="text-3xl md:text-4xl font-bold my-2">2</h3>
+            <h4 class="text-sm md:text-xl text-gray-600 dark:text-white">Perpustakaan</h4>     
+       </div>
+      
+      
+      
+    </div>
+    
+  </div>
+
+</div>
 
 
         <!-- div: Testimoni / Call to Action -->
       <div class="py-16 bg-indigo-50 dark:bg-zinc-900 transition-colors duration-300">
   <div class="max-w-4xl mx-auto px-6 text-center">
-    <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">
-      Gabung Bersama SMK Juara!
-    </h2>
+      <div class="text-center mb-4">
+            <h2 class="font-bold text-3xl md:text-4xl uppercase mb-4 dark:text-white"><span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-violet-500 to-sky-500">
+        Ayo Gabung
+      </span>
+      Smk</h2>
+      <div class="w-52 h-1 bg-indigo-300 mx-auto"></div>
+    </div>
     <p class="text-gray-700 dark:text-gray-300 mb-6">
       Jadilah bagian dari generasi unggul yang siap kerja, siap kuliah, dan siap wirausaha. Bersama SMK Juara, kamu bisa!
     </p>
@@ -374,15 +486,20 @@
 
       
 
-      <div class="bg-white  dark:bg-transparent py-16 transition-colors duration-300" id="kejuruan">
-  <div class="max-w-6xl mx-auto text-center mb-12">
-    <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white">Program Kejuruan</h2>
+      <div class="bg-white dark:bg-gray-800 px-8 py-16 transition-colors duration-300" id="kejuruan">
+  <div class=" mx-auto text-center mb-12">
+     <div class="text-center mb-4">
+            <h2 class="font-bold text-3xl md:text-4xl uppercase mb-4 dark:text-white"><span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-violet-500 to-sky-500">
+        kompetensi
+      </span>
+      Keahlian</h2>
+      <div class="w-56 h-1 bg-indigo-300 mx-auto"></div>
+    </div>
     <p class="mt-3 text-gray-600 dark:text-gray-300 text-sm sm:text-base">
       SMK Juara menyediakan berbagai jurusan unggulan yang siap menghadapi tantangan dunia kerja dan industri.
     </p>
   </div>
-
-  <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto px-4">
+  <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 mx-auto ">
     
     <!-- Card -->
     <div class="bg-white dark:bg-zinc-900 rounded-2xl shadow-md hover:shadow-xl transition overflow-hidden relative border border-indigo-100 dark:border-zinc-700">
@@ -418,7 +535,7 @@
       </div>
 
       <!-- Badge -->
-      <div class="absolute bottom-4 right-4 bg-green-100 dark:bg-green-700 text-indigo-50 text-xs font-semibold px-3 py-1 rounded-full shadow-sm flex items-center gap-2">
+      <div class="absolute bottom-4 right-4 bg-green-100 dark:bg-white text-indigo-50 text-xs font-semibold px-3 py-1 rounded-full shadow-sm flex items-center gap-2">
         <span class="w-2.5 h-2.5 bg-indigo-500 rounded-full animate-pulse"></span>
       </div>
     </div>
@@ -430,10 +547,16 @@
 
  <div
     id="fasilitas"
-    class="w-full relative bg-white dark:bg-zinc-900 py-16 transition-colors duration-300 px-6"
+    class="w-full relative bg-white dark:bg-zinc-900 py-16 transition-colors duration-300 px-8"
   >
   <div class="max-w-5xl mx-auto text-center mb-12">
-    <h2 class="text-3xl sm:text-4xl font-bold text-indigo-600 dark:text-white">Fasilitas Sekolah</h2>
+      <div class="text-center mb-4">
+            <h2 class="font-bold text-3xl md:text-4xl uppercase mb-4 dark:text-white"><span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-violet-500 to-sky-500">
+        Fasilitas
+      </span>
+      Sekolah</h2>
+      <div class="w-64 h-1 bg-indigo-300 mx-auto"></div>
+    </div>
     <p class="mt-3 text-gray-600 dark:text-gray-300 text-sm sm:text-base">
       Kami menyediakan fasilitas terbaik untuk mendukung proses belajar mengajar dan pengembangan potensi siswa.
     </p>
@@ -446,7 +569,7 @@
     <!-- Item 1 -->
     <li class="flex flex-col md:flex-row items-center md:items-start md:justify-between gap-6">
       <div class="w-full md:w-5/12 text-left md:order-1 order-2">
-        <h3 class="text-xl font-semibold text-indigo-700 dark:text-indigo-400">Laboratorium Komputer</h3>
+        <h3 class="text-xl font-semibold text-indigo-700 dark:text-white">Laboratorium Komputer</h3>
         <p class="mt-2 text-gray-600 dark:text-gray-300 text-sm">
           Lab komputer dilengkapi perangkat terbaru untuk mendukung praktik coding, desain grafis, dan multimedia.
         </p>
@@ -464,7 +587,7 @@
              class="rounded-xl shadow-md w-full object-cover h-52 ring-2 ring-indigo-100 dark:ring-indigo-700 transition">
       </div>
       <div class="w-full md:w-5/12 text-left md:text-right md:order-2 order-1">
-        <h3 class="text-xl font-semibold text-indigo-700 dark:text-indigo-400">Perpustakaan Digital</h3>
+        <h3 class="text-xl font-semibold text-indigo-700 dark:text-white">Perpustakaan Digital</h3>
         <p class="mt-2 text-gray-600 dark:text-gray-300 text-sm">
           Akses koleksi buku fisik dan digital untuk mendukung literasi dan referensi siswa dalam berbagai bidang.
         </p>
@@ -474,7 +597,7 @@
     <!-- Item 3 -->
     <li class="flex flex-col md:flex-row items-center md:items-start md:justify-between gap-6">
       <div class="w-full md:w-5/12 text-left md:order-1 order-2">
-        <h3 class="text-xl font-semibold text-indigo-700 dark:text-indigo-400">Ruang Kelas Interaktif</h3>
+        <h3 class="text-xl font-semibold text-indigo-700 dark:text-white">Ruang Kelas Interaktif</h3>
         <p class="mt-2 text-gray-600 dark:text-gray-300 text-sm">
           Kelas dengan proyektor, whiteboard digital, dan suasana nyaman untuk menunjang proses belajar aktif.
         </p>
@@ -485,26 +608,73 @@
       </div>
     </li>
   </ul>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch py-10">
+
+  <!-- Item Fasilitas -->
+  <div class="bg-white dark:bg-zinc-800 rounded-xl shadow-md p-6 text-center hover:shadow-lg transition duration-300">
+    <div class="mx-auto mb-4 w-12 h-12 flex items-center justify-center rounded-full bg-indigo-100 dark:bg-indigo-500">
+      <i class="fa-solid fa-futbol text-indigo-600 dark:text-white text-xl"></i>
+    </div>
+    <h3 class="text-lg font-semibold text-gray-800 dark:text-gray-100">Lapangan Bola</h3>
+    <p class="text-2xl font-bold text-indigo-600 dark:text-indigo-300">2</p>
+  </div>
+
+  <!-- Item Fasilitas -->
+  <div class="bg-white dark:bg-zinc-800 rounded-xl shadow-md p-6 text-center hover:shadow-lg transition duration-300">
+    <div class="mx-auto mb-4 w-12 h-12 flex items-center justify-center rounded-full bg-green-100 dark:bg-green-600">
+      <i class="fa-solid fa-flask text-green-600 dark:text-white text-xl"></i>
+    </div>
+    <h3 class="text-lg font-semibold text-gray-800 dark:text-gray-100">Lab Kimia</h3>
+    <p class="text-2xl font-bold text-green-600 dark:text-green-300">3</p>
+  </div>
+
+  <!-- Item Fasilitas -->
+  <div class="bg-white dark:bg-zinc-800 rounded-xl shadow-md p-6 text-center hover:shadow-lg transition duration-300">
+    <div class="mx-auto mb-4 w-12 h-12 flex items-center justify-center rounded-full bg-yellow-100 dark:bg-yellow-600">
+      <i class="fa-solid fa-book text-yellow-600 dark:text-white text-xl"></i>
+    </div>
+    <h3 class="text-lg font-semibold text-gray-800 dark:text-gray-100">Perpustakaan</h3>
+    <p class="text-2xl font-bold text-yellow-600 dark:text-yellow-300">1</p>
+  </div>
+
+  <!-- Item Fasilitas -->
+  <div class="bg-white dark:bg-zinc-800 rounded-xl shadow-md p-6 text-center hover:shadow-lg transition duration-300">
+    <div class="mx-auto mb-4 w-12 h-12 flex items-center justify-center rounded-full bg-red-100 dark:bg-red-600">
+      <i class="fa-solid fa-computer text-red-600 dark:text-white text-xl"></i>
+    </div>
+    <h3 class="text-lg font-semibold text-gray-800 dark:text-gray-100">Lab Komputer</h3>
+    <p class="text-2xl font-bold text-red-600 dark:text-red-300">4</p>
+  </div>
+
+</div>
+
 </div>
 
 
 
-<div class="bg-gray-50 dark:bg-transparent py-16 px-4 lg:px-8" id="berita">
+<div class="bg-gray-50 dark:bg-gray-800 py-16 px-8" id="berita">
   <div class="max-w-6xl mx-auto text-center mb-12">
-    <h2 class="text-3xl sm:text-4xl font-bold text-indigo-600 dark:text-slate-100">Berita Sekolah</h2>
+      <div class="text-center mb-4">
+            <h2 class="font-bold text-3xl md:text-4xl uppercase mb-4 dark:text-white"><span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-violet-500 to-sky-500">
+        Berita
+      </span>
+      Sekolah</h2>
+      <div class="w-44 h-1 bg-indigo-300 mx-auto"></div>
+    </div>
     <p class="mt-3 text-gray-600 dark:text-gray-400 text-sm sm:text-base">
       Temukan informasi terbaru seputar kegiatan, prestasi, dan pengumuman penting dari SMK Juara.
     </p>
   </div>
 
-  <div class="grid gap-8 lg:grid-cols-3 md:grid-cols-2 max-w-6xl mx-auto">
+  <div class="grid gap-8 lg:grid-cols-3 md:grid-cols-2 mx-auto">
    
     <article class="bg-white dark:bg-zinc-900 rounded-xl shadow hover:shadow-lg transition overflow-hidden flex flex-col">
       <img src="assets/berita/juara.jpg" alt="Lomba IT Nasional" class="h-52 w-full object-cover">
       <div class="p-6 flex flex-col flex-grow">
         <span class="text-xs text-indigo-600 dark:text-slate-100 font-semibold uppercase mb-2">Prestasi</span>
         <h3 class="text-lg font-bold text-gray-800 dark:text-white mb-2">SMK Juara Sabet Juara 1 Lomba IT Nasional</h3>
-        <p class="text-sm text-gray-600 flex-grow dark:text-gray-200 dark:text-gray-200">
+        <p class="text-sm text-gray-600 flex-grow dark:text-gray-200">
           Siswa jurusan RPL berhasil meraih juara 1 pada kompetisi IT Nasional 2025 dalam kategori pengembangan aplikasi mobile.
         </p>
         <div class="mt-4 flex justify-between items-center text-sm text-gray-500">
@@ -555,12 +725,18 @@
 
 
 </div>
-<div id="kontak" class="bg-white dark:bg-transparent py-16">
-  <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+<div id="kontak" class="bg-white dark:bg-gray-800 py-16 px-8">
+   <div class="text-center mb-4">
+            <h2 class="font-bold text-3xl md:text-4xl uppercase mb-4 dark:text-white"><span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-violet-500 to-sky-500">
+        Hubungi 
+      </span>
+      kami</h2>
+      <div class="w-24 h-1 bg-indigo-300 mx-auto"></div>
+    </div>
+  <div class="mx-auto grid md:grid-cols-2 gap-12 ">
     
     <!-- Info Kontak -->
     <div>
-      <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-6 dark:text-slate-100">Hubungi Kami</h2>
       <p class="text-gray-600 text-sm sm:text-base mb-6 dark:text-gray-300">
         Jika kamu memiliki pertanyaan seputar SMK Juara, silakan hubungi kami melalui informasi di bawah ini atau kirim pesan langsung.
       </p>
@@ -619,68 +795,91 @@
 
   </div>
 </div>
-<div class="bg-white pt-16 dark:bg-zinc-900" id="ppdb">
+<div class="bg-white py-16 px-8 dark:bg-zinc-900" id="SPMB">
   <div class="mx-auto text-center">
-    <!-- Judul -->
-    <h2 class="text-3xl md:text-4xl mx-2 font-bold text-indigo-700 mb-4 dark:text-slate-100">Penerimaan Peserta Didik Baru (PPDB) 2025</h2>
-    <p class="text-gray-700 text-lg mb-8 dark:text-gray-300">
-      Ayo bergabung bersama SMK Juara dan wujudkan masa depanmu bersama pendidikan vokasi terbaik!
-    </p>
+   <div class="text-center mb-4">
+            <h2 class="font-bold text-3xl md:text-4xl uppercase mb-4 dark:text-white"><span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-violet-500 to-sky-500">
+        Info SPMB
+      </span>
+       ONLINE</h2>
+      <div class="w-56 h-1 bg-indigo-300 mx-auto"></div>
+    </div>
+  <p class="text-gray-700 text-lg mb-8 dark:text-gray-300 max-w-3xl mx-auto">
+    Ayo bergabung bersama SMK Juara dan wujudkan masa depanmu bersama pendidikan vokasi terbaik!
+  </p>
 
-    <!-- Info PPDB -->
-    <div class="dark:bg-zinc-900 shadow-xl rounded-2xl p-8 text-left space-y-6">
-      <div>
-        <h3 class="text-xl font-semibold text-indigo-600 mb-2 dark:text-slate-100"><i class="fa-solid fa-calendar-days dark:text-gray-400"></i> Jadwal Pendaftaran</h3>
-        <ul class="list-disc list-inside text-gray-700 dark:text-gray-200">
-          <li>Pendaftaran Dibuka: <strong>1 Mei 2025</strong></li>
-          <li>Pendaftaran Ditutup: <strong>30 Juni 2025</strong></li>
-          <li>Pengumuman Hasil Seleksi: <strong>5 Juli 2025</strong></li>
-          <li>Daftar Ulang: <strong>6–10 Juli 2025</strong></li>
-        </ul>
-      </div>
+  <!-- Info SPMB (grid 2 kolom di md+, 1 kolom mobile) -->
+  <div class="dark:bg-zinc-900 rounded-2xl p-8 text-left space-y-6
+            grid grid-cols-1 md:grid-cols-2 gap-10 mx-auto">
 
-      <div>
-        <h3 class="text-xl font-semibold text-indigo-600 mb-2 dark:text-slate-100"><i class="fa-solid fa-user-graduate"></i> Jurusan yang Tersedia</h3>
-        <ul class="list-disc list-inside text-gray-700 dark:text-gray-200">
-          <li>Rekayasa Perangkat Lunak (RPL)</li>
-          <li>Teknik Komputer & Jaringan (TKJ)</li>
-          <li>Multimedia (MM)</li>
-        </ul>
-      </div>
+    <div>
+      <h3 class="text-xl font-semibold text-indigo-600 mb-2 dark:text-indigo-400">
+        <i class="fa-solid fa-calendar-days dark:text-indigo-400"></i> Jadwal Pendaftaran
+      </h3>
+      <ul class="list-disc list-inside text-gray-700 dark:text-gray-200">
+        <li>Pendaftaran Dibuka: <strong>1 Mei 2025</strong></li>
+        <li>Pendaftaran Ditutup: <strong>30 Juni 2025</strong></li>
+        <li>Pengumuman Hasil Seleksi: <strong>5 Juli 2025</strong></li>
+        <li>Daftar Ulang: <strong>6–10 Juli 2025</strong></li>
+      </ul>
+    </div>
 
-      <div>
-        <h3 class="text-xl font-semibold text-indigo-600 mb-2 dark:text-slate-100"><i class="fa-solid fa-list"></i> Syarat Pendaftaran</h3>
-        <ul class="list-disc list-inside text-gray-700 dark:text-gray-200">
-          <li>Fotokopi rapor kelas 9 semester 1 dan 2</li>
-          <li>Pas foto ukuran 3x4 (2 lembar)</li>
-          <li>Fotokopi akta kelahiran & KK</li>
-          <li>Mengisi formulir pendaftaran (online / offline)</li>
-        </ul>
-      </div>
+    <div>
+      <h3 class="text-xl font-semibold text-indigo-600 mb-2 dark:text-indigo-400">
+        <i class="fa-solid fa-user-graduate"></i> Jurusan yang Tersedia
+      </h3>
+      <ul class="list-disc list-inside text-gray-700 dark:text-gray-200">
+        <li>Rekayasa Perangkat Lunak (RPL)</li>
+        <li>Teknik Komputer & Jaringan (TKJ)</li>
+        <li>Multimedia (MM)</li>
+      </ul>
+    </div>
 
-      <div>
-        <h3 class="text-xl font-semibold text-indigo-600 mb-2 dark:text-slate-100"><i class="fa-solid fa-gear"></i> Cara Daftar</h3>
-        <ol class="list-decimal list-inside text-gray-700 dark:text-gray-200">
-          <li>Klik tombol "Daftar Sekarang" di bawah</li>
-          <li>Isi formulir pendaftaran secara lengkap</li>
-          <li>Upload berkas persyaratan</li>
-          <li>Tunggu konfirmasi dari panitia PPDB</li>
-        </ol>
-      </div>
+    <div>
+      <h3 class="text-xl font-semibold text-indigo-600 mb-2 dark:text-indigo-400">
+        <i class="fa-solid fa-list"></i> Syarat Pendaftaran
+      </h3>
+      <ul class="list-disc list-inside text-gray-700 dark:text-gray-200">
+        <li>Fotokopi rapor kelas 9 semester 1 dan 2</li>
+        <li>Pas foto ukuran 3x4 (2 lembar)</li>
+        <li>Fotokopi akta kelahiran & KK</li>
+        <li>Mengisi formulir pendaftaran (online / offline)</li>
+      </ul>
+    </div>
 
-      <div class="text-center mt-10">
-        <a href="#ppdb" target="_blank" class="inline-block bg-indigo-600 text-white font-semibold px-8 py-3 rounded-lg shadow hover:bg-indigo-700 transition duration-300">
-          Daftar Sekarang
-        </a>
-      </div>
+    <div>
+      <h3 class="text-xl font-semibold text-indigo-600 mb-2 dark:text-indigo-400">
+        <i class="fa-solid fa-gear"></i> Cara Daftar
+      </h3>
+      <ol class="list-decimal list-inside text-gray-700 dark:text-gray-200">
+        <li>Klik tombol "Daftar Sekarang" di bawah</li>
+        <li>Isi formulir pendaftaran secara lengkap</li>
+        <li>Upload berkas persyaratan</li>
+        <li>Tunggu konfirmasi dari panitia SPMB</li>
+      </ol>
+    </div>
+
+    <!-- Tombol Daftar: buat full-width di 2 kolom supaya pas center -->
+    <div class="md:col-span-2 text-center mt-10">
+      <a href="#SPMB" target="_blank" class="inline-block bg-indigo-600 text-white font-semibold px-8 py-3 rounded-lg shadow hover:bg-indigo-700 transition duration-300">
+        Daftar Sekarang
+      </a>
     </div>
   </div>
 </div>
 
-<div class="py-16 bg-white dark:bg-transparent" id="kerjasama">
+</div>
+
+<div class="py-16 px-8 bg-white dark:bg-gray-700" id="kerjasama">
   <div class="container mx-auto">
     <div class="text-center mb-8">
-      <h2 class="text-2xl md:text-3xl font-semibold text-indigo-700 dark:text-slate-100">Kerja Sama dengan Perusahaan</h2>
+      <div class="text-center mb-4">
+            <h2 class="font-bold text-3xl md:text-4xl uppercase mb-4 dark:text-white"><span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-violet-400">
+       Kerjasama
+      </span>
+       sekolah</h2>
+      <div class="w-56 h-1 bg-indigo-300 mx-auto"></div>
+    </div>
       <p class="text-gray-600 dark:text-gray-200 mt-2">Kerja sama dengan berbagai perusahaan dalam kegiatan Prakerin dan Kunjungan Industri</p>
     </div>
 
@@ -702,8 +901,14 @@
     </div>
   </div>
 </div>
-<div class="py-8 flex flex-col">
-  <h2 class="text-4xl uppercase font-semibold sm:text-xl leading-tight text-indigo-600 dark:text-slate-100 pb-4 text-center">Kenapa Harus Masuk SMK ?</h2>
+<div class="py-8 px-8 flex flex-col">
+ <div class="text-center mb-4">
+            <h2 class="font-bold text-3xl md:text-4xl uppercase mb-4 dark:text-white"><span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-violet-500 to-sky-500">
+       kenapa harus
+      </span>
+       smk</h2>
+      <div class="w-48 h-1 bg-indigo-300 mx-auto"></div>
+    </div>
 
   <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
     <!-- Accordion Card Item -->
@@ -743,7 +948,6 @@
 </div>
 
 </div>
-
 <footer class="bg-indigo-100 dark:bg-zinc-900">
   <div class="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
     <div class="lg:flex lg:items-start lg:gap-12">
@@ -759,7 +963,7 @@
       </div>
 
       <!-- Navigasi -->
-      <div class="grid grid-cols-2 sm:grid-cols-3 gap-10 mt-10 lg:mt-0 lg:w-2/3">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 mt-10 lg:mt-0 lg:w-2/3">
         <div>
           <h3 class="text-lg font-semibold text-gray-800 mb-4 dark:text-slate-100">Kejuruan</h3>
           <ul class="space-y-2 text-sm text-gray-700 dark:text-gray-200">
@@ -770,43 +974,53 @@
           </ul>
         </div>
 
-        <div>
-          <h3 class="text-lg font-semibold text-gray-800 mb-4 dark:text-slate-100">Tautan Cepat</h3>
-          <ul class="space-y-2 text-sm text-gray-700 dark:text-gray-200">
-            <li><a href="#">Tentang Kami</a></li>
-            <li><a href="#">Galeri</a></li>
-            <li><a href="#">Kontak</a></li>
-            <li><a href="#">PPDB Online</a></li>
-          </ul>
-        </div>
+        
 
+        <!-- Kontak & Maps -->
         <div>
-          <h3 class="text-lg font-semibold text-gray-800 mb-4 dark:text-slate-100">Hubungi Kami</h3>
-          <ul class="space-y-2 text-sm text-gray-700 dark:text-gray-200">
-             <li>
-    <div class="flex gap-2 items-center">
-      <i class="fa-solid fa-location-dot"></i>
-      <p>Jl. Pendidikan No. 123, Kota Juara</p>
-    </div>
-  </li>
-  <li>
-    <div class="flex gap-2 items-center">
-      <i class="fa-solid fa-phone-volume"></i>
-      <p>(021) 1234-5678</p>
-    </div>
-  </li>
-  <li>
-    <div class="flex gap-2 items-center">
-      <i class="fa-solid fa-inbox"></i>
-      <p>info@smkjuara.sch.id</p>
-    </div>
-  </li>
-  <li>
-    <div class="flex gap-2 items-center">
-      <i class="fa-solid fa-clock"></i>
-      <p>Senin - Jumat: 07.00 - 15.00</p>
-    </div>
-  </li>
+          <h3 class="text-xl font-semibold text-gray-800 mb-4 dark:text-slate-100">Hubungi Kami</h3>
+          <ul class="space-y-2 text-sm text-gray-700 dark:text-gray-200 mb-4">
+            <li>
+              <div class="flex gap-2 items-center">
+                <i class="fa-solid fa-location-dot"></i>
+                <p>Jl. Pendidikan No. 123, Kota Juara</p>
+              </div>
+            </li>
+            <li>
+              <div class="flex gap-2 items-center">
+                <i class="fa-solid fa-phone-volume"></i>
+                <p>(021) 1234-5678</p>
+              </div>
+            </li>
+            <li>
+              <div class="flex gap-2 items-center">
+                <i class="fa-solid fa-inbox"></i>
+                <p>info@smkjuara.sch.id</p>
+              </div>
+            </li>
+            <li>
+              <div class="flex gap-2 items-center">
+                <i class="fa-solid fa-clock"></i>
+                <p>Senin - Jumat: 07.00 - 15.00</p>
+              </div>
+            </li>
+            
+          </ul>
+
+         
+        </div>
+        <div>
+          <h3 class="text-lg font-semibold text-gray-800 mb-4 dark:text-slate-100">Lokasi SMK Juara</h3>
+          <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3162.9300487267285!2d106.8226787153101!3d-6.200000000000000!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f3e3e8f44e65%3A0x2229b2e6e6c6c6f3!2sJl.%20Pendidikan%20No.123!5e0!3m2!1sid!2sid!4v1620000000000"
+              width="100%"
+              height="150"
+              style="border:0; border-radius: 0.5rem;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              class="shadow-md"
+            ></iframe>
         </div>
       </div>
     </div>
@@ -832,6 +1046,7 @@
     </div>
   </div>
 </footer>
+
 
   </body>
 
